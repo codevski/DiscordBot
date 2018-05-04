@@ -10,7 +10,6 @@ VOLUME /config /data
 EXPOSE 22 80 443 3000 35729 8080
 
 # Install utilities
-echo "**** install packages ****" && \
 apk update && \
 apk update
 apk upgrade && \
