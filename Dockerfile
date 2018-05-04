@@ -10,12 +10,7 @@ VOLUME /config /data
 EXPOSE 22 80 443 3000 35729 8080
 
 # Install utilities
-RUN apk update && \
-    apk update
-    apk upgrade && \
-    apk --no-cache add openssh && \
-    rc-update add sshd && \
-    /etc/init.d/sshd start \
+RUN apk --no-cache add openssh
 
 # Add the files
 ADD test /data
